@@ -44,6 +44,7 @@ class EmployeeController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
+            'email' => 'required|string|unique',
             'status' => ['required', Rule::in([EmployeeStatus::TETAP->value, EmployeeStatus::KONTRAK->value, EmployeeStatus::MAGANG->value])],
             'gaji' => 'required|numeric',
             'tanggal_masuk' => 'required|date',
@@ -53,6 +54,7 @@ class EmployeeController extends Controller
         $employee = new Employee();
         $employee->nama = $validatedData['nama'];
         $employee->jabatan = $validatedData['jabatan'];
+        $employee->email = $validatedData['email'];
         $employee->status = $validatedData['status'];
         $employee->gaji = $validatedData['gaji'];
         $employee->tanggal_masuk = $validatedData['tanggal_masuk'];
@@ -79,6 +81,7 @@ class EmployeeController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required|string|max:255',
             'jabatan' => 'required|string|max:255',
+            'email' => 'required|string|unique',
             'status' => ['required', Rule::in([EmployeeStatus::TETAP->value, EmployeeStatus::KONTRAK->value, EmployeeStatus::MAGANG->value])],
             'gaji' => 'required|numeric',
             'tanggal_masuk' => 'required|date',
@@ -88,6 +91,7 @@ class EmployeeController extends Controller
         $employee = Employee::findOrFail($id);
         $employee->nama = $validatedData['nama'];
         $employee->jabatan = $validatedData['jabatan'];
+        $employee->email = $validatedData['email'];
         $employee->status = $validatedData['status'];
         $employee->gaji = $validatedData['gaji'];
         $employee->tanggal_masuk = $validatedData['tanggal_masuk'];

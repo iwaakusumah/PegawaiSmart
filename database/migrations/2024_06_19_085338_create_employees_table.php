@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('jabatan');
+            $table->string('email')->unique();
             $table->enum('status', ['Tetap', 'Kontrak', 'Magang']);
             $table->decimal('gaji', 10, 2);
             $table->date('tanggal_masuk');

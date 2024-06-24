@@ -35,6 +35,7 @@ class EmployeeFactory extends Factory
         return [
             'nama' => $this->faker->name,
             'jabatan' => $this->faker->randomElement($listJabatan),
+            'email' => $this->faker->email,
             'status'=> $this->faker->randomElement($listStatus),
             'gaji' => $this->faker->randomFloat(2, 5000000, 20000000),
             'tanggal_masuk' => $this->faker->date(),

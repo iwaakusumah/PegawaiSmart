@@ -23,6 +23,7 @@
                             <th>No.</th>
                             <th>Nama</th>
                             <th>Posisi</th>
+                            <th>Email</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -33,6 +34,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $employee->nama }}</td>
                             <td>{{ $employee->jabatan }}</td>
+                            <td>{{ $employee->email }}</td>
                             <td>{{ $employee->status }}</td>
                             <td class="text-center">
                                 <div class="d-flex justify-content-center align-items-center">
