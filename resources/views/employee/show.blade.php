@@ -1,6 +1,6 @@
 @extends('partials.base')
 
-@section('title', 'Edit Pegawai')
+@section('title', 'Detail Pegawai')
 
 @section('content')
 <div class="container mt-5">
