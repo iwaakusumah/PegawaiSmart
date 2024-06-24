@@ -22,7 +22,7 @@
                         <tr>
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Jabatan</th>
+                            <th>Posisi</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
