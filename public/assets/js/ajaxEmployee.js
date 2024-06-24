@@ -1,5 +1,4 @@
-// public/js/employee.js
-
+// form tambah
 function confirmSubmit() {
     Swal.fire({
         title: 'Apakah Anda yakin?',
@@ -36,11 +35,11 @@ function confirmSubmit() {
     });
 }
 
-// Add event listener to the submit button
 $(document).ready(function() {
     $('#submitBtn').on('click', confirmSubmit);
 });
 
+// form edit
 $(document).ready(function() {
     $('#submitForm').on('click', function(e) {
         e.preventDefault();
@@ -65,7 +64,6 @@ $(document).ready(function() {
                             'Data telah diperbarui.',
                             'success'
                         ).then(() => {
-                            // Redirect or do something else after success
                             window.location.href = '/employees';
                         });
                     },
@@ -82,7 +80,7 @@ $(document).ready(function() {
     });
 });
 
-// Delete Button
+// form hapus
 $(document).ready(function() {
     $('.deleteButton').on('click', function(e) {
         e.preventDefault();
@@ -102,7 +100,6 @@ $(document).ready(function() {
                     url: form.attr('action'),
                     data: form.serialize(),
                     success: function(response) {
-                        // Hapus item dari DOM setelah sukses
                         form.closest('.employee-item').fadeOut(300, function() {
                             $(this).remove();
                         });
