@@ -58,9 +58,9 @@
 <script>
     // Data dari controller yang disediakan untuk digunakan di JavaScript
     window.chartDatas = {
-            labels: <?php echo json_encode($labels); ?>,
-            datas: <?php echo json_encode($datas); ?>
-        };
+        labels: <?php echo json_encode($labels); ?>,
+        datas: <?php echo json_encode($datas); ?>
+    };
 
     // Data dari controller yang disediakan untuk digunakan di JavaScript
     window.chartData = {
