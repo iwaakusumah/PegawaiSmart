@@ -16,7 +16,7 @@ class DashboardController extends Controller
         $yearCounts = DB::table('employees')
             ->select(DB::raw('YEAR(tanggal_masuk) as year'), DB::raw('count(*) as count'))
             ->groupBy('year')
-            ->orderBy('year','asc')
+            ->orderBy('year', 'asc')
             ->pluck('count', 'year')
             ->toArray();
 
@@ -39,15 +39,17 @@ class DashboardController extends Controller
         $jumlahPegawai = DB::table('employees')->count();
 
         // Menghitung rata-rata gaji
-        $rataRataGaji = DB::table('employees')->avg('gaji');
+        $rataRataGaji = DB::table('employees')
+            ->whereNotIn('status', ['Layoff', 'Resign', 'Pensiun'])
+            ->avg('gaji');
 
-        // Menghitung jumlah jabatan unik
-        $jumlahJabatan = DB::table('employees')->distinct('jabatan')->count('jabatan');
+        // Menghitung jumlah posisi unik
+        $jumlahPosisi = DB::table('employees')->distinct('posisi')->count('posisi');
 
         // Menghitung jumlah status unik
         $jumlahStatus = DB::table('employees')->distinct('status')->count('status');
 
         // Mengirimkan data ke view dashboard.index
-        return view('dashboard.index', compact('jumlahPegawai', 'rataRataGaji', 'jumlahJabatan', 'jumlahStatus', 'label', 'data', 'datas', 'labels'));
+        return view('dashboard.index', compact('jumlahPegawai', 'rataRataGaji', 'jumlahPosisi', 'jumlahStatus', 'label', 'data', 'datas', 'labels'));
     }
 }

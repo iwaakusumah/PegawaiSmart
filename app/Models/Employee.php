@@ -12,10 +12,12 @@ class Employee extends Model
 
     protected $fillable = [
         'nama',
+        'email',
         'jabatan',
         'status',
         'gaji',
         'tanggal_masuk',
+        'tanggal_keluar',
     ];
 
     protected $casts = [

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
           labels: label,
           datasets: [{
               data: data,
-              backgroundColor: ['#007bff', '#ffc107', '#28a745'],
+              backgroundColor: ['#ff0000', '#ffc107', '#ff9f40', '#007bff', '#28a745', '#9966ff'],
           }],
       },
   });

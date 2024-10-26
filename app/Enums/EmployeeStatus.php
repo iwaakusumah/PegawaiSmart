@@ -3,7 +3,10 @@
 namespace App\Enums;
 
 enum EmployeeStatus: string {
-    case TETAP = 'Tetap';
-    case KONTRAK = 'Kontrak';
-    case MAGANG = 'Magang';
+    case Tetap = 'Tetap';
+    case Kontrak = 'Kontrak';
+    case Magang = 'Magang';
+    case Resign = 'Resign';
+    case Pensiun = 'Pensiun';
+    case Layoff = 'Layoff';
 }

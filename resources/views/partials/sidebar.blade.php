@@ -7,7 +7,7 @@
             </a>
             <a class="nav-link" href="{{ route('employees.index') }}">
                 <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
-                Data Pegawai
+                Semua Pegawai
             </a>
         </div>
     </div>

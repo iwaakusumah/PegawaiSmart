@@ -22,8 +22,8 @@
     </div>
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Jumlah Jabatan Pegawai
-                <h2>{{ $jumlahJabatan }}</h2>
+            <div class="card-body">Jumlah Posisi Pegawai
+                <h2>{{ $jumlahPosisi }}</h2>
             </div>
         </div>
     </div>

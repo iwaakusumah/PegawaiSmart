@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('jabatan');
+            $table->string('posisi');
             $table->string('email')->unique();
-            $table->enum('status', ['Tetap', 'Kontrak', 'Magang']);
+            $table->enum('status', ['Tetap', 'Kontrak', 'Magang', 'Resign', 'Layoff', 'Pensiun']);
             $table->decimal('gaji', 10, 2);
             $table->date('tanggal_masuk');
+            $table->date('tanggal_keluar')->nullable();
             $table->timestamps();
         });
     }

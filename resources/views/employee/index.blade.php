@@ -33,7 +33,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $employee->nama }}</td>
-                            <td>{{ $employee->jabatan }}</td>
+                            <td>{{ $employee->posisi }}</td>
                             <td>{{ $employee->email }}</td>
                             <td>{{ $employee->status }}</td>
                             <td class="text-center">
