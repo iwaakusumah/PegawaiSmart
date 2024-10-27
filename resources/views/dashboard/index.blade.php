@@ -8,28 +8,28 @@
 <div class="row">
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Jumlah Pegawai
+            <div class="card-body text-center">Jumlah Pegawai
                 <h2>{{ $jumlahPegawai }}</h2>
             </div>
         </div>
     </div>
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Rata-Rata Gaji
+            <div class="card-body text-center">Rata-Rata Gaji
                 <h2>{{ number_format($rataRataGaji, 2, ',', '.') }}</h2>
             </div>
         </div>
     </div>
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Jumlah Posisi Pegawai
+            <div class="card-body text-center">Jumlah Posisi Pegawai
                 <h2>{{ $jumlahPosisi }}</h2>
             </div>
         </div>
     </div>
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Jumlah Status Pegawai
+            <div class="card-body text-center">Jumlah Status Pegawai
                 <h2>{{ $jumlahStatus }}</h2>
             </div>
         </div>
@@ -59,7 +59,8 @@
     // Data dari controller yang disediakan untuk digunakan di JavaScript
     window.chartDatas = {
         labels: <?php echo json_encode($labels); ?>,
-        datas: <?php echo json_encode($datas); ?>
+        datasMasuk: <?php echo json_encode($datasMasuk); ?>,
+        datasKeluar: <?php echo json_encode($datasKeluar); ?>
     };
 
     // Data dari controller yang disediakan untuk digunakan di JavaScript
